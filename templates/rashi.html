@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional statements</title>
+</head>
+<body>
+    <center>
+        <h1>Hi Hello ... In this page data is representing using jinja..</h1>
+        <h1 style="color: red;">The values of A is {{a}}, B is {{b}} and C is {{c}} </h1>
+
+        <h1 style="color: purple;">-- > Using Nested if condition <--</h1>
+        {% if a > b %}   
+            {% if a > c %}
+                <h1>A is greater than B,C</h1>
+            {% else %}
+                <h1>C is Greater than B,A</h1>
+            {% endif %}
+        {% else %}
+            {% if b > c %}
+                <h1>B is greater than A,C</h1>
+            {% else %}
+                <h1>C is greater than A,B</h1>
+            {% endif %}
+        {% endif %}
+
+        <h1 style="color:purple">-- > Using if elif else <--</h1>
+        {% if a > b and a > c %}
+            <h1>A is greater </h1>
+        {% elif b > c %}
+            <h1>B is greater </h1>
+        {% else %}
+            <h1>C is greater </h1>
+        {% endif %}
+    </center>
+</body>
+</html>
